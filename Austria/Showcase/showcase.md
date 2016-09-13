@@ -113,8 +113,8 @@ Links:
 ## [tarife.at - Speedmap](https://www.data.gv.at/anwendungen/tarife-at-speedmap/)
 Based on speedtests done by other users, this Web Application shows you possible speeds from different ISP for a certain location.
 
-![alt text](https://github.com/medman506/opendata-info/raw/master/Austria/Showcase/pictures/speedmap.jpg "Pegelalarm")
-![alt text](https://github.com/medman506/opendata-info/raw/master/Austria/Showcase/pictures/speedmap_2-png "Pegelalarm")
+![alt text](https://github.com/medman506/opendata-info/raw/master/Austria/Showcase/pictures/speedmap.jpg "tarife.at Speedmap")
+![alt text](https://github.com/medman506/opendata-info/raw/master/Austria/Showcase/pictures/speedmap_2.PNG "tarife.at Speedmap")
 
 Links:  
 <https://www.data.gv.at/anwendungen/tarife-at-speedmap/>  
