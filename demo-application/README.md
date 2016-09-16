@@ -1,6 +1,8 @@
 # Demo Application
 
-A working implementation can be found on <http://opendatainfo.pfiff.me>.
+#### Installation and working Demo
+A working implementation can be found on <http://opendatainfo.pfiff.me>.  
+Installation is simple: Just pass the HTML files, js folder, css folder, libs folder and data folder to your own webserver. You might have to change the link to the csv in demo.js, otherwise it will use the one hosted on opendatainfo.pfiff.me.
 
 ## Charts and Graphs <http://opendatainfo.pfiff.me/index.html>:
 This code demonstrates how to use the CKAN API of several different OGD Portals to download datasets and receive information from those portals. In this specific case, information about the number of available datasets and categories is used to create a dynamic visualisation of the current status of the austrian, german and swiss OGD Portals.
