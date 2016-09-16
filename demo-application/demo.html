@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open Data Demo</title>
+
+    <!-- CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/odi.css">
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Navigation umschalten</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Open Data Info</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="demo.html">Open Data Demo</a></li>
+                    <li><a href="https://github.com/medman506/opendata-info">Github Projekt</a></li>
+                    <li><a href="https://github.com/medman506/opendata-info/wiki">Github Wiki</a></li>
+                </ul>
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Verwertung von offenen Daten</h2>
+            <p>
+                Als Beispieldatensatz dient die <a href="https://www.data.gv.at/katalog/dataset/ogd-weiterentwicklung-ideensammlung">Ideensammlung</a> der Cooperation OGD Österreich:
+            </p>
+            <div class="panel panel-default">
+                <div class="panel-heading">Auszug aus dem Datensatz</div>
+                <div class="panel-body">
+                    <samp>  "ID 	Sub_ID1	Sub_ID2 ""Text""" <br/>
+                                                "01	0	0	""Uservoting für neue gewünschte Datensätze""" <br/>
+                                                "01	1	0	""Verzeichnis (noch nicht) veröffentlichter Daten""" <br/>
+                                                "02	0	0	""OGD positiv verkaufen""" <br/>
+                                                "02	1	0	""In der Schule anfangen""" <br/>
+                                                "02	2	0	""nicht nur auf Opendata -0 Seiten auf die Nutzung hinweisen (Bsp Parlament -0 OD Logo bei normaler Websuchmaske)""" <br/>
+                                                "02	3	0	""Bedeutung über Initiativen (z B USA/Deutschland) aufklären"""
+                    </samp>
+                </div>
+                <div class="panel-footer">Beschreibung: Jede ID für eine Idee steht, die Sub_ID1 für einen Kommentar zu dieser sowie die Sub_ID2 für einen Kommentar zu einem Kommentar.</div>
+            </div>
+            <p>Die notwendigen Schritte:</p>
+            <span>
+                <ul>
+                <li>Da sich die Daten nicht ändern, wurde das CSV lokal auf diesem Server hinterlegt.</li>
+                <li>Um die weitere Verarbeitung zu vereinfachen, wurde das CSV mit einem Editor (Suche und Ersetze) in folgendes Format gebracht:</li>
+                </ul>
+                <div class="panel panel-default">
+                <div class="panel-body">
+                    <samp> "ID";"Sub_ID1";"Sub_ID2";"Text" <br/>
+                            "01";"0";"0";"Uservoting für neue gewünschte Datensätze" <br/>
+                            "01";"1";"0";"Verzeichnis (noch nicht) veröffentlichter Daten" <br/>
+                            "02";"0";"0";"OGD positiv verkaufen" <br/>
+                            "02";"1";"0";"In der Schule anfangen" <br/>
+                            "02";"2";"0";"nicht nur auf Opendata -0 Seiten auf die Nutzung hinweisen (Bsp Parlament -0 OD Logo bei normaler Websuchmaske)" <br/>
+                            "02";"3";"0";"Bedeutung über Initiativen (z B USA/Deutschland) aufklären" <br/>
+                    </samp>
+                </div>
+                </div>
+                <ul>
+                <li>Dieses CSV kann nun über einen GET-Call aufgerufen und verarbeitet werden.</li>
+                <li>Es wurde die <a href="https://github.com/evanplaice/jquery-csv/">jquery-csv</a> Lib verwendet, um aus dem CSV die entsprechenden JSON Objekte zu generieren</li>
+                <li>Über eine for-Schleife wurden nun aus diesen Objekten die unten zu sehenden Panels generiert</li>
+                <li>Das wars auch schon, so einfach kann Open Data sein!</li>
+                </ul>
+                <p>Dieses Beispiel auf <a href="https://github.com/medman506/opendata-info">Github</a></p>
+
+            </span>
+        </div>
+        <div class="panelContainer"></div>
+    </div>
+    
+    <!-- SCRIPTS -->
+    <!-- External Scripts: JQuery and Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Local Scripts -->
+    <script type="text/javascript" src="libs/jquery.csv.min.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+    
+</body>
+</html>
